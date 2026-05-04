@@ -14,17 +14,21 @@
 }
 
 .logo{
-    width: 10px;
+    max-width: 100%;
 }
+
 .text{
     text-align: center;
     display: flex;
     gap: 40px;
+    flex-wrap: wrap;
 }
+
 .nav-bar-image{
     position: relative; /*retains size*/
     max-width: 100%;
     height: auto;
+    max-width: 100%;
 }
 
 .link-properties{
@@ -42,8 +46,6 @@
 .hero{
     height: 400px;
     width: 100%;
-    margin: 0;
-    padding: 0;
     background-color: #FFDB77;
     justify-content: space-between;
     display: flex;
@@ -93,3 +95,45 @@
     display: flex;
 }
 
+.awards{
+    height: 400px;
+    width: 100%;
+    background-color: #FFFBF2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.awards h2{
+    font-size: 50px;
+}
+
+.awards p{
+    font-size: 20px;
+    font-family:Sinhala Sangam MN;
+    text-align: center;
+}
+
+.image_awards{
+   max-width: 100%;
+   height: auto;
+   display: flex;
+   flex-direction: row;
+   gap: 40px;
+}
+
+.image_awards img{
+    width: 200px;
+}
+.global_winner{
+    text-align: center;
+}
+.business_awards{
+    text-align: centers;
+}
+
+.finalist{
+    text-align: center;
+}
