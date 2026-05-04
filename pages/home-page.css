@@ -40,7 +40,9 @@
     text-align: center;
 }
 .hero-text{
+    display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 .hero{
@@ -52,34 +54,38 @@
     align-items: center;
 }
 
-.hero-text h1{
-    text-align: left;
+.hero-text{
     padding-left: 40px;
-    padding-top: 50px;
-    font-size: 50px;
+}
+
+.hero-text h1{
+    font-size: 85px;
     font-family: skia;
+    flex-wrap: wrap;
+    color:#1E424E;
 }
 
 .hero-text p{
-    padding-left: 40px;
-    font-size: 20px;
+    font-size: 25px;
     font-family: Sinhala Sangam MN;
+    color:#1E424E;
 } 
 
 .button{
-    display: flex;
-    height: auto;
-    width: 150px;
+    height: 80px;
+    width: 300px;
     background-color: #E19E11;
-    margin-left: 40px;
-    border-radius: 10px;
-    justify-content: center;
+    border-radius: 40px;
+    text-align: center;
+    border: none;
 }
 
 .button p{
+    margin:0;
     font-family: Sinhala Sangam MN;
-    font-size: 20px;
-    text-align: center;
+    color:#1E424E;
+    font-weight: bold;
+    font-size: 40px;
 }
 
 .hero-images img{
@@ -96,7 +102,7 @@
 }
 
 .awards{
-    height: 400px;
+    height: 500px;
     width: 100%;
     background-color: #FFFBF2;
     padding: 20px;
@@ -108,12 +114,14 @@
 
 .awards h2{
     font-size: 50px;
+    color:#1E424E;
 }
 
 .awards p{
     font-size: 20px;
     font-family:Sinhala Sangam MN;
     text-align: center;
+    color:#1E424E;
 }
 
 .image_awards{
