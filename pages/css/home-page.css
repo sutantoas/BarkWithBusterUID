@@ -4,14 +4,9 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: Signika Negative;
-    src: url(assets/fonts/SignikaNegative-VariableFont_wght.ttf);
-}
 
 @media(min-width: 390px){
-    .recommended_products{
-    }
+
 }
 
 .navigation-bar{
@@ -77,7 +72,7 @@
 
 .hero-text p{
     font-size: 25px;
-    font-family: Sinhala Sangam MN;
+    font-family: 'Signika Negative';
     color:#1E424E;
 } 
 
@@ -122,10 +117,7 @@
     justify-content: center;
 }
 
-.awards h2{
-    font-size: 50px;
-    color:#1E424E;
-}
+
 
 .awards p{
     font-size: 20px;
@@ -168,6 +160,10 @@
     overflow-x: scroll;
 }
 
+.recommended_products a{
+    text-decoration: none;
+}
+
 .first_product{
     display: flex;
 }
@@ -179,11 +175,6 @@
     min-width: 300px;
 }
 
-.recommended_products h2{
-    font-family: Signika Negative;
-    font-size: 50px;
-    color:#1E424E;
-}
 
 .recommended_products p{
     font-family: Sinhala Sangam MN;
@@ -200,7 +191,8 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-    height: 300px;
+    height: 400px;
+    background-color: #FFFBF2;
 }
 
 .boxed_products{
@@ -214,6 +206,12 @@
     justify-content: center;
 }
 
+.all_categories{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
 .boxed_products img{
     width: 150px;
     height: auto;
@@ -223,3 +221,23 @@
     font-family: Sinhala Sangam MN;
     font-weight: bold;
 }
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    height: 300px;
+    align-items: stretch;
+    padding: 40px;
+    background-color: #FED944;
+
+}
+
+.footer h2{
+    font-size: 30px;
+}
+
+.about_us{
+    max-width: 550px;
+}
+
