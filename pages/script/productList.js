@@ -3,7 +3,8 @@ const products = [
         name: "Chicken Hearts",
         description: "Air Dried Dog treats",
         price: "$15.95",
-        image: "assets/image/chicken-heart-dog-treats_940x.webp"
+        image: "assets/image/chicken-heart-dog-treats_940x.webp",
+        link: "productPage.html"
     },
     {
         name: "Beef Paddywack",
@@ -16,6 +17,12 @@ const products = [
         description: "Air Dried Dog treats",
         price: "$15.95",
         image: "assets/image/lamb_liver.webp"
+    },
+    {
+        name: "Chicken Neck",
+        description: "Air Dried Dog treats",
+        price: "$15.95",
+        image: "assets/image/chicken-neck.webp"
     }
 ]
 
@@ -28,7 +35,7 @@ products.forEach(product =>{
                     <img src="${product.image}" alt="chicken hearts">   
                 </div>
                 <div class="texts">
-                    <h3>${product.name} </h3>
+                    <h3><a href="${product.link}">${product.name} </a> </h3>
                     <p>${product.description}</p>
                     <div class = "price-alignment">
                         <p>${product.price} </p>
