@@ -10,6 +10,12 @@ const products = [
         description: "Air Dried Dog treats",
         price: "$15.95",
         image: "assets/image/beef-paddywack.webp"
+    },
+    {
+        name: "Lamb Liver",
+        description: "Air Dried Dog treats",
+        price: "$15.95",
+        image: "assets/image/lamb_liver.webp"
     }
 ]
 

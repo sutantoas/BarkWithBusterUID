@@ -29,6 +29,18 @@
     gap: 20px;
 }
 
+.products-filter{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 6rem;
+}
+
+.filter{
+    display: flex;
+    flex-direction: column;
+}
+
 .texts{
     display: flex;
     flex-direction: column;
