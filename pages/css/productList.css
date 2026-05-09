@@ -1,0 +1,62 @@
+.all-products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.product-image{
+    background-color: #FFDB77 ;
+    width: 150px;
+    height: 150px;
+}
+
+.product-image img{
+    width: 150px;
+    height: auto;
+}
+
+#product-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.variety-product{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.texts{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.add-cart{
+    background-color: #1E424E;
+    width: 130px;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.add-cart p{
+    color: #FFFBF2;
+    font-size: 15px;
+}
+
+.weight{
+    border-radius: 5px;
+    font-family: Sinhala Sangam MN;
+    border: 1px solid #000;
+}
+
+.price-alignment{
+    display: flex;
+    gap: 1.5rem;
+}

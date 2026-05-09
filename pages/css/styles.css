@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family:'Signika Negative';
     src: url(../assets/fonts/SignikaNegative-VariableFont_wght.ttf) format('truetype');
@@ -9,6 +15,53 @@ h2{
     color:#1E424E;
 }
 
+h3{
+    font-family: Sinhala Sangam MN;
+}
+
 p{
     font-family: Sinhala Sangam MN;
 }
+
+.body{
+    background-color: #FFFBF2;
+}
+
+/*CSS Navigation*/
+.navigation-bar{
+    background-color: #FED944;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo{
+    max-width: 100%;
+}
+
+.text{
+    text-align: center;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.nav-bar-image{
+    position: relative; /*retains size*/
+    max-width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.link-properties{
+    font-family: Sinhala Sangam MN;
+    text-decoration: none; /*removes underline*/
+    color: #1E424E;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+

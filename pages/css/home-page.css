@@ -1,49 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 
 @media(min-width: 390px){
 
 }
 
-.navigation-bar{
-    background-color: #FED944;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
 
-.logo{
-    max-width: 100%;
-}
-
-.text{
-    text-align: center;
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.nav-bar-image{
-    position: relative; /*retains size*/
-    max-width: 100%;
-    height: auto;
-    max-width: 100%;
-}
-
-.link-properties{
-    font-family: Sinhala Sangam MN;
-    text-decoration: none; /*removes underline*/
-    color: #1E424E;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-}
 .hero-text{
     display: flex;
     flex-direction: column;
