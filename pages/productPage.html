@@ -6,27 +6,43 @@
         <link rel = "stylesheet" href="css/productPage.css">
     </head>
 
-     <nav>
+      <nav>
         <section class="navigation-bar">
+        <a href="index.html">
         <div class = "logo">
              <img src= "assets/icons/logo-bark-buster.png" alt = "login"/>
         </div>
+        </a>
         <div class= "text">
             <a href="#" class = "link-properties">About us</a> 
             <a href="productList.html" class = "link-properties">Shop</a> 
             <a href="#" class = "link-properties">Review</a> 
         </div>
         <section class = "nav-bar-image">
-            <img src= "assets/icons/person.png" alt = "login"/>
             <img src= "assets/icons/search.png" alt = "login"/>
+            <img src ="assets/icons/heart.png" alt="favorite" />
+            <img src= "assets/icons/person.png" alt = "login"/>
             <img src= "assets/icons/shopping-bag.png" alt = "login"/>
             </section>
         </section>
     </nav>
     <body>
         <section class="beef-product">
-            <div class="product-images">
-                <img src="assets/image/chicken-heart-dog-treats_940x.webp" alt="chicken heart">
+            <div class="all-images">
+                <div class="product-images">
+                    <img src="assets/image/chicken-heart-dog-treats_940x.webp" alt="chicken heart">
+                </div>
+                <div class="image-gallery">
+                    <div class="indiv-image">
+                        <img src="assets/image/chicken-heart-dog-treats_940x.webp" alt="chicken heart">
+                    </div>
+                     <div class="indiv-image">
+                        <img src="assets/image/chicken-heat-treats.webp" alt="chicken heart treats">
+                    </div>
+                     <div class="indiv-image">
+                        <img src="assets/image/chicken-heart-dog-treats_940x.webp" alt="chicken heart">
+                    </div>
+                </div>
             </div>
             <div class = "product-details">
                 <div class = "title-price">
@@ -52,7 +68,11 @@
                     </div>
                     <div class="quantity-selection">
                         <p> Quantity</p>
-
+                        <div class="quantity-button">
+                            <button class = "qty-decrease" id="decrease"> - </button>
+                            <span class = "qty value" id="qty-dispaly"> 1 </span>
+                            <button class="qty-increase" id="increase"> + </button>
+                        </div>   
                     </div>
                 </div>
             <button class ="add-to-cart">
@@ -60,8 +80,21 @@
             </button>
             <details>
                 <summary>Product Details</summary>
-                <p> The product helps dogs..</p>
+                <p> Made from 100% Australian beef lung and gently air-dehydrated, these bite-sized cubes are packed with protein, naturally low in fat,  and perfect for frequent rewards without overfeeding.</p>
             </details>
+             <details>
+                <summary>How to use</summary>
+                <p> Made from 100% Australian beef lung and gently air-dehydrated, <br>these bite-sized cubes are packed with protein, naturally low in fat, <br> and perfect for frequent rewards without overfeeding.</p>
+            </details>
+            </div>
+        </section>
+
+        <section class = "reviews">
+            <h4>Reviews</h4>
+            <img src ="assets/image/stars.png" alt = "stars">
+            <div class="name-review">
+                <h5> Eirin B</h5>
+                <p>My dog loves it! She eats it enthusiastically at every meal, and it’s clear she really enjoys the taste. I appreciate that it has a good balance of nutrients. The size and crunch are perfect for her, making mealtime easy and stress-free. </p>
             </div>
         </section>
     </body>
