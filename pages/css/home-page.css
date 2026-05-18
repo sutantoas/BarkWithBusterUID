@@ -71,6 +71,11 @@
     align-items: center;
     row-gap: 10px;
     justify-content: center;
+    background-image: url('../assets/image/ear_l.png'), url('../assets/image/ear_r.png');
+    background-position: left bottom -100px, right bottom -100px;
+    background-size: 200px auto;
+    background-repeat: no-repeat;
+
 }
 
 
@@ -149,6 +154,10 @@
     gap: 20px;
     height: 400px;
     background-color: #FFFBF2;
+    background-image: url('../assets/image/Paws-1.png'), url('../assets/image/Paws-2.png');
+    background-position: left bottom -120px, right top -100px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .boxed_products{
@@ -216,7 +225,7 @@
         height: 40px;
     }
 
-    
+
 
 
 }

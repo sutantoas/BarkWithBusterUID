@@ -23,6 +23,12 @@ const products = [
         description: "Air Dried Dog treats",
         price: "$15.95",
         image: "assets/image/chicken-neck.webp"
+    },
+    {
+        name: "Teeth Cleanser",
+        description: "Air Dried Dog treats",
+        price: "$15.95",
+        image: "assets/image/roo-cleanser.webp"
     }
 ]
 
