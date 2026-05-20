@@ -187,24 +187,7 @@
     font-weight: bold;
 }
 
-.footer{
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    height: 300px;
-    align-items: stretch;
-    padding: 40px;
-    background-color: #FED944;
 
-}
-
-.footer h2{
-    font-size: 30px;
-}
-
-.about_us{
-    max-width: 550px;
-}
 
 
 @media (max-width: 700px){

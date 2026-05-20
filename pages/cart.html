@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+     <head>   
+        <title> Bark With Buster </title>
+        <link rel = "stylesheet" href="css/styles.css">
+        <link rel = "stylesheet" href="css/cart.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <nav>
+        <section class="navigation-bar">
+        <a href="index.html">
+        <div class = "logo">
+             <img src= "assets/icons/logo-bark-buster.png" alt = "login"/>
+        </div>
+        </a>
+
+        <button class ="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class= "text">
+            <a href="#" class = "link-properties">About us</a> 
+            <a href="productList.html" class = "link-properties">Shop</a> 
+            <a href="#" class = "link-properties">Review</a> 
+        </div>
+        <section class = "nav-bar-image">
+            <img src= "assets/icons/search.png" alt = "login"/>
+            <img src ="assets/icons/heart.png" alt="favorite" />
+            <img src= "assets/icons/person.png" alt = "login"/>
+            <img src= "assets/icons/shopping-bag.png" alt = "login"/>
+            </section>
+        </section>
+    </nav>
+
+    <body>
+        <section class="checkout">
+            <h1> Checkout </h1>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill">
+                </div>
+            </div>
+            <p>$40 till free shipping</p>
+
+            <div class="products-summary">
+                <div class="cart-all-product">
+                    <div class="cart-heading">
+                        <h3>Products</h3>
+                        <h3> Weight </h3>
+                        <h3> Price </h3>
+                    </div>
+                    <div class ="cart-row">
+                        <div class="cart-product">
+                            <img src="assets/image/beef-paddywack.webp" alt="beef">
+                            <div class="product-title">
+                            <h4> Beef Paddywack </h4>
+                                <div class="quantity-button">
+                                    <button class = "qty-decrease" id="decrease"> - </button>
+                                    <span class = "qty value" id="qty-dispaly"> 1 </span>
+                                    <button class="qty-increase" id="increase"> + </button>
+                                </div>   
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div class="discount">
+                        <h2>Discount voucher</h2>
+                    </div>
+                    <div class="code-apply">
+                        <input type="text" placeholder="Enter Code">
+                        <button class="apply">Apply</button>
+                    </div>
+
+                    <div class = "amount-rows">
+                        <div class="summary-rows">
+                            <h4> Sub Total </h4>
+                            <p id="subtotal"> $0.00 </p>
+                        </div>
+                        <div class="summary-rows">
+                            <h4> Discount </h4>
+                            <p id="discount"> $0.00 </p>
+                        </div>
+                        <div class="summary-rows">
+                            <h4> Total </h4>
+                            <p id="total"> $0.00 </p>
+                        </div>
+                    </div>
+                    <button class="checkout-button">Checkout</button>
+                </div>
+            </div>
+        </section>
+
+    </body>
+
+</html>
