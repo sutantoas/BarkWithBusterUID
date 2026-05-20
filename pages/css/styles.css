@@ -42,6 +42,32 @@ body{
     background-color: #FFFBF2;
 }
 
+/*Input Buttons*/
+input{
+    border: 1px solid #000000;
+    font-size: 1rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: transparent;
+}
+
+.checkout-button{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color:#286376;
+    color: #FFFBF2;
+    font-size: 1rem;
+    border: none;
+}
+
+.summary-rows{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /*CSS Navigation*/
 
 .navigation-bar{

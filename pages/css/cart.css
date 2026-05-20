@@ -134,7 +134,6 @@ input{
     border-radius: 1rem;
     padding: 0.5rem;
     background-color: transparent;
-
 }
 
 .amount-rows{
@@ -142,19 +141,20 @@ input{
     padding-top: 4rem;
 }
 
-.summary-rows{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.order-summary a{
+    width: 100%;
 }
 
-.checkout-button{
-    width: 100%;
-    padding: 1rem;
-    border-radius: 1rem;
-    background-color:#286376;
-    color: #FFFBF2;
-    font-size: 1rem;
-    border: none;
+
+.last-row{
+    border-top: 1px solid #000;
+    padding-top: 0.5rem;
+}
+
+/* text */
+.summary-rows p{
+    color: #1E424E; 
+}
+.last-row p{
+    font-weight: bold;
 }

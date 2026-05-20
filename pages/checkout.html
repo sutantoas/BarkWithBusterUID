@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+     <head>   
+        <title> Bark With Buster </title>
+        <link rel = "stylesheet" href="css/styles.css">
+        <link rel = "stylesheet" href="css/checkout.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <nav>
+        <section class="navigation-bar">
+        <a href="index.html">
+        <div class = "logo">
+             <img src= "assets/icons/logo-bark-buster.png" alt = "login"/>
+        </div>
+        </a>
+        </section>
+    </nav>
+
+    <body>
+        <section class="checkout-info">
+            <section class="checkout-summary">
+            <h2>Checkout</h2>
+                <div class="contact">
+                    <h3>Contact</h3>
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Phone">
+                </div>
+                <div class="delivery">
+                    <h3>Delivery</h3>
+                    <div class="row-input">
+                        <input type="text" placeholder="First Name">
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                    <input type="text" placeholder="City">
+                    <input type="text" placeholder="Street Address">
+                    <input type="text" placeholder="Suburb">
+                    <input type="text" placeholder="Postcode">
+                </div>
+                <div class="payment">
+                    <h3>Payment</h3>
+                    <input type="text" placeholder="Card Number">
+                    <div class="row-input">
+                        <input type="text" placeholder="CVC">
+                        <input type="text" placeholder="Expiry Date">
+                    </div>
+                </div>
+                <a href="confirmation.html">
+                    <button class ="checkout-button"> Pay </button>
+                </a>
+             </section>
+            <section class="order-summary">
+                <h2> Order summary</h2>
+
+                <div class="cost">
+                    <div class="summary-rows">
+                        <h4> Sub Total </h4>
+                        <p id="subtotal"> $0.00 </p>
+                        </div>
+                        <div class="summary-rows">
+                            <h4> Shipping </h4>
+                            <p id="discount"> $0.00 </p>
+                        </div>
+                        <div class="summary-rows">
+                            <h4> Discount </h4>
+                            <p id="total"> $0.00 </p>
+                        </div>
+                          <div class="summary-rows">
+                            <h4> Total </h4>
+                            <p id="total"> $0.00 </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </body>
+</html>
