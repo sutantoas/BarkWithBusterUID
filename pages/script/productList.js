@@ -32,6 +32,7 @@ const products = [
     }
 ]
 
+
 const container = document.getElementById('product-container')
 
 products.forEach(product =>{
@@ -44,7 +45,7 @@ products.forEach(product =>{
                     <h3><a href="${product.link}">${product.name} </a> </h3>
                     <p>${product.description}</p>
                     <div class = "price-alignment">
-                        <p>${product.price} </p>
+                        <p class = "price-display">${product.price} </p>
                             <select class = "weight">
                                 <option value ="100g"> 100g</option>
                                 <option value ="200g"> 200g</option>
@@ -57,4 +58,34 @@ products.forEach(product =>{
                 </div>
             </div>
     `
+})
+
+
+document.querySelectorAll('.add-cart').forEach(btn =>{
+    btn.addEventListener('click', () =>{
+        const number = document.querySelector('.cart-count')
+        const current = parseInt(number.textContent) || 0
+
+        number.textContent = current + 1
+        number.classList.add('active')
+        addToCart(item)
+    })
+})
+
+document.querySelectorAll('.weight').forEach(selection =>{
+    selection.addEventListener('change', ()=>{
+        const weight = selection.value
+
+        const prices = {
+            '100g': '$15.95',
+            '200g': '$21.95',
+            '500g': '$25.95'
+        }
+   
+        const card = selection.closest('.variety-product')
+        const priceDisplay = card.querySelector('.price-alignment p')
+        priceDisplay.textContent = prices[weight]
+
+
+    })
 })

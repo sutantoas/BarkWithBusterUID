@@ -7,12 +7,18 @@
     </head>
 
      <nav>
-        <section class="navigation-bar">
+               <section class="navigation-bar">
         <a href="index.html">
         <div class = "logo">
              <img src= "assets/icons/logo-bark-buster.png" alt = "login"/>
         </div>
         </a>
+
+        <button class ="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <div class= "text">
             <a href="#" class = "link-properties">About us</a> 
             <a href="productList.html" class = "link-properties">Shop</a> 
@@ -22,7 +28,10 @@
             <img src= "assets/icons/search.png" alt = "login"/>
             <img src ="assets/icons/heart.png" alt="favorite" />
             <img src= "assets/icons/person.png" alt = "login"/>
-            <img src= "assets/icons/shopping-bag.png" alt = "login"/>
+            <a href="cart.html" class="cart-link">
+                <img src= "assets/icons/shopping-bag.png" alt = "login"/>
+                <span class="cart-count">0</span>
+            </a>
             </section>
         </section>
     </nav>
@@ -58,5 +67,6 @@
             </div>
          </section>
          <script src="script/productList.js"></script>
+         
     </body>
 </html>

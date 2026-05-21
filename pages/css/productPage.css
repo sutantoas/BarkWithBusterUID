@@ -89,6 +89,11 @@
     background-color: #FFDB77;
     border-radius: 3rem;
     text-decoration: none;
+    border: 2px solid transparent;
+}
+
+.weight.selected{
+    border: 2px solid #000;
 }
 
 .quantity-button{

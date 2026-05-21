@@ -51,11 +51,15 @@
 
 .hero-images img{
     position: relative;
-    width: 500px;
+    width: 70%;
     height: auto;
     object-fit: contain;
     max-width: 100%;
 
+}
+
+.hero-image-mobile img{
+    display: none;
 }
 
 .hero-images{
@@ -75,10 +79,7 @@
     background-position: left bottom -100px, right bottom -100px;
     background-size: 200px auto;
     background-repeat: no-repeat;
-
 }
-
-
 
 .awards p{
     font-size: 20px;
@@ -189,26 +190,57 @@
 
 
 
-
-@media (max-width: 700px){
+/*Mobile Responsiveness*/
+@media (max-width: 390px){
     .hero{
         height: 300px;
         width: 100%;
     }
 
     .hero h1{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .hero p{
         font-size: 1rem;
     }
     .button{
-        width: 200px;
-        height: 40px;
+        width: 10rem;
+        height: 3rem;
+    }
+
+    .awards{
+        height: 24rem;
+        width: 100%;
+        background-color: #FFFBF2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+        justify-content: center;
+        background-image: url('../assets/image/ear_l.png'), url('../assets/image/ear_r.png');
+        background-position: left bottom -100px, right bottom -100px;
+        background-size: 10rem auto;
+        background-repeat: no-repeat;
     }
 
 
+    .awards img{
+        width: 100%;
+    }
+    
+    .hero-images img{
+        display: none;
+    }
+
+    .hero-image-mobile img{
+        display: flex;
+        width: 100%;
+    }
+
+  .recommended-products{
+        gap: 1rem;
+    }
 
 
 }
