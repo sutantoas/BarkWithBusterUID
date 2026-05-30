@@ -54,7 +54,7 @@
     gap: 0.5rem;
 }
 
-.cart-row{
+#cart-row{
     display: grid;
     grid-template-columns: 3fr 2fr 2fr;  
     padding: 16px 20px;
@@ -101,6 +101,13 @@
 .qty-increase{
     border: none;
     background-color: #FFDB77;
+}
+
+.weight{
+    width: 40%;
+    border-radius: 0.3rem;
+    font-family: Sinhala Sangam MN;
+    border: 1px solid #000;
 }
 
 .order-summary h2{

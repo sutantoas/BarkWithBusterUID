@@ -1,5 +1,6 @@
 const products = [
     {
+        id: "1",
         name: "Chicken Hearts",
         description: "Air Dried Dog treats",
         price: "$15.95",
@@ -7,6 +8,7 @@ const products = [
         link: "productPage.html"
     },
     {
+        id: "2",
         name: "Beef Paddywack",
         description: "Air Dried Dog treats",
         price: "$15.95",
@@ -52,7 +54,11 @@ products.forEach(product =>{
                                 <option value ="500g"> 500g</option>
                             </select>
                     </div>
-                    <button class="add-cart">
+                    <button class="add-cart"
+                        data-id="${product.id}"
+                        data-name="${product.name}"
+                        data-price="${product.price}"
+                        data-image="${product.image}">
                         <p> Add To Cart </p>
                     </button>
                 </div>
@@ -68,7 +74,15 @@ document.querySelectorAll('.add-cart').forEach(btn =>{
 
         number.textContent = current + 1
         number.classList.add('active')
-        addToCart(item)
+
+        const product = {
+            id: btn.dataset.id,
+            name: btn.dataset.name,
+            price: btn.dataset.price,
+            image: btn.dataset.image
+        }
+
+        addToCart(product)
     })
 })
 
