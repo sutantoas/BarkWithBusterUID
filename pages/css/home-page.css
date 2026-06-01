@@ -99,14 +99,7 @@
 .image_awards img{
     width: 200px;
 }
-.global_winner{
-    text-align: center;
-}
-.business_awards{
-    text-align: centers;
-}
-
-.finalist{
+.awards-row{
     text-align: center;
 }
 
@@ -218,10 +211,23 @@
         align-items: center;
         row-gap: 10px;
         justify-content: center;
+        padding: 2rem;
         background-image: url('../assets/image/ear_l.png'), url('../assets/image/ear_r.png');
         background-position: left bottom -100px, right bottom -100px;
         background-size: 10rem auto;
         background-repeat: no-repeat;
+    }
+
+    .image_awards{
+        display: grid;
+        max-width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .awards-row{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
     }
 
 

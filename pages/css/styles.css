@@ -182,15 +182,18 @@ input{
 }
 
 @media (max-width: 390px){
-    .logo img{
-    width: 4rem;
-    }
-
     .hamburger{
-        display: flex;
         order: 1;
+        display: flex;
         flex-direction: column;
         gap: 5px;
+    }
+    .navigation-bar a{
+        order: 2;
+    }
+
+    .logo img{
+        width: 4rem;
     }
 
     .nav-bar-image{
@@ -205,6 +208,10 @@ input{
         font-size: 2.2rem;
     }
 
+    p{
+        font-size: 1.5rem;
+    }
+    
     .about-us{
         display: none;
     }
