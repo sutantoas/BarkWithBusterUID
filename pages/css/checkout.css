@@ -63,6 +63,7 @@ input{
 .order-summary{
     flex: 1;
     background-color: #FFEEC8;
+    display: flex;
     align-self: stretch;
     padding: 2rem;
 }
@@ -72,3 +73,43 @@ input{
     padding-top: 30rem;
 }
 
+@media (max-width: 390px){
+    .checkout{
+    display: flex;
+    flex-direction: column;
+    min-height: auto;          
+    }
+    
+    .checkout-summary {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .contact{
+        width: 100%;
+    }
+
+    .deliver{
+        width: 100%;
+    }
+
+    .payment {
+        width: 100%;             
+    }
+
+    .row-input{
+        display: flex;
+        flex-direction: row;
+        min-width: auto;
+        gap: 0.2rem;
+    }
+
+    .row-input input {
+        flex: 1;               
+        min-width: 0;          
+    }
+
+    .order-summary{
+        display: none;
+    }
+}
