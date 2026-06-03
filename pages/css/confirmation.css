@@ -16,7 +16,6 @@
 
 .view-order{
     flex: 1;
-    width: 80%;
     padding: 1rem;
     background-color:#286376;
     color: #FFFBF2;
@@ -25,7 +24,6 @@
 }
 .find-more{
     flex: 1;
-    width: 80%;
     padding: 1rem;
     background-color:#FED944;
     color: #000;
