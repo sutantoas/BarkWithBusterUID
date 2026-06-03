@@ -15,22 +15,31 @@ const products = [
         image: "assets/image/beef-paddywack.webp"
     },
     {
+        id: "3",
         name: "Lamb Liver",
         description: "Air Dried Dog treats",
         price: "$15.95",
         image: "assets/image/lamb_liver.webp"
     },
     {
+        id: "4",
         name: "Chicken Neck",
         description: "Air Dried Dog treats",
         price: "$15.95",
         image: "assets/image/chicken-neck.webp"
     },
     {
+        id: "5",
         name: "Teeth Cleanser",
         description: "Air Dried Dog treats",
         price: "$15.95",
         image: "assets/image/roo-cleanser.webp"
+    },{
+        id:"6",
+        name: "Kangaroo Cubes",
+        description: "Air Dried Dog Treats",
+        price: "$15.95",
+        image: "assets/image/kangaroo-cubes.png"
     }
 ]
 
@@ -53,14 +62,15 @@ products.forEach(product =>{
                                 <option value ="200g"> 200g</option>
                                 <option value ="500g"> 500g</option>
                             </select>
+                        <button class="add-cart"
+                            data-id="${product.id}"
+                            data-name="${product.name}"
+                            data-price="${product.price}"
+                            data-image="${product.image}">
+                            <p> Add To Cart </p>
+                        </button>
                     </div>
-                    <button class="add-cart"
-                        data-id="${product.id}"
-                        data-name="${product.name}"
-                        data-price="${product.price}"
-                        data-image="${product.image}">
-                        <p> Add To Cart </p>
-                    </button>
+                   
                 </div>
             </div>
     `
