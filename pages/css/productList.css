@@ -95,6 +95,7 @@
     display: flex;
     justify-content: center;
     border-radius: 5px;
+     margin-top: 0.5rem;
 }
 
 
@@ -102,6 +103,10 @@
     color: #FFFBF2;
     font-size: 1rem;
 }
+
+ .add-cart:hover p {
+        color: #FFDB77; 
+    }
 
 .weight{
     border-radius: 0.3rem;
@@ -111,8 +116,21 @@
 
 .price-alignment{
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: 0.5rem;
+    width: 100%;
+}
+.price-display {
+    flex: 1; 
+    width: auto;
+}
+
+.weight {
+    width: auto;
+    flex-shrink: 0;
 }
 
 
@@ -125,11 +143,16 @@
         display: flex;
         flex-direction: column;
     }
+
     .filtering{
-    background-color: #FFDB77;
-    border: none;
-    border-radius: 0.2rem;
-}
+        display: flex;
+        background-color: #FFDB77;
+        padding: 0.8rem;
+        justify-content: center;
+        border: none;
+        border-radius: 0.2rem;
+        gap: 0.2rem;
+    }
     .products-filter{
         display: flex;
         flex-direction: column;
@@ -139,7 +162,7 @@
     }
 
     .filter{
-        width: 4rem;
+        width: 5rem;
         height: auto;
     }
 
@@ -150,16 +173,12 @@
         display: none;
     }
 
-    .filtering{
-        display: flex;
-    }
-
     .filter h3{
         display: none;
     }
 
 
- #product-container {
+    #product-container {
         grid-template-columns: 1fr; 
         gap: 1rem;
     }
@@ -167,13 +186,15 @@
     .variety-product {
         flex-direction: row; 
         gap: 1rem;
-        align-items: center;
-      
+        align-items: stretch;
+        border-radius: 12px;
+        overflow: hidden;
+        padding: 0.5rem;
     }
 
     .product-image {
-        width: 120px;
-        height: 120px;
+        width: 140px;
+        height: 140px;
         flex-shrink: 0; 
         background-color: #FFDB77;
         border-radius: 0.2rem;
@@ -182,8 +203,11 @@
 
     .texts {
         flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         background-color: #FFFBF2;
-        padding: 0.75rem;
+        padding: 0.5rem 0;
     }
 
     .texts h3 {
@@ -195,31 +219,30 @@
         font-size: 0.8rem;
     }
 
-    .price-display {
-        color: #E07A2F;
-        font-weight: bold;
-        font-size: 0.95rem;
+   .price-display {
+        width: 100%;  
+        min-width: 100%;
     }
 
-    .price-alignment {
-        flex-direction: row;
-        align-items: center;
-        gap: 0.5rem;
-        margin: 0.5rem 0;
+    .add-cart {
+        flex: 1;     
+        width: auto;
+        margin-top: 0;
+        height: 2.2rem;
     }
+
 
     .weight {
         font-size: 0.8rem;
         padding: 0.3rem;
     }
 
-    .add-cart {
-        height: 38px;
-        width: 100%;
-        border-radius: 8px;
+    .price-alignment{
+        flex-wrap: wrap;
     }
 
+
     .add-cart p {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
 }
