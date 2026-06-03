@@ -64,13 +64,35 @@ input{
     flex: 1;
     background-color: #FFEEC8;
     display: flex;
+    flex-direction: column;
     align-self: stretch;
     padding: 2rem;
 }
 
 .cost{
     width: 100%;
-    padding-top: 30rem;
+    margin-top: auto;
+}
+
+.product-details{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #000;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.product-details img{
+    width: 30%;
+}
+
+.prodcut-info h2{
+    font-size: 2rem;
+}
+
+.price{
+    margin-left: auto;
+    align-self: flex-end;
 }
 
 @media (max-width: 390px){
@@ -79,7 +101,7 @@ input{
     flex-direction: column;
     min-height: auto;          
     }
-    
+
     .checkout-summary {
         width: 100%;
         padding: 1rem;
