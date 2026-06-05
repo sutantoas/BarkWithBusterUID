@@ -1,7 +1,7 @@
 const products = [
     {
         id: "1",
-        name: "Chicken Hearts",
+        name: "Chicken Heart",
         description: "Air Dried Dog treats",
         price: "$15.95",
         image: "assets/image/chicken-heart-dog-treats_940x.webp",
@@ -76,7 +76,7 @@ products.forEach(product =>{
     `
 })
 
-
+// Saving products to cart
 document.querySelectorAll('.add-cart').forEach(btn =>{
     btn.addEventListener('click', () =>{
         const number = document.querySelector('.cart-count')
@@ -85,17 +85,23 @@ document.querySelectorAll('.add-cart').forEach(btn =>{
         number.textContent = current + 1
         number.classList.add('active')
 
+        const card = btn.closest('.variety-product')
+        const selectedWeight = card.querySelector('.weight').value
+        const priceDisplay = card.querySelector('.price-display')
+
         const product = {
             id: btn.dataset.id,
             name: btn.dataset.name,
-            price: btn.dataset.price,
-            image: btn.dataset.image
+            price: priceDisplay.textContent.trim(),
+            image: btn.dataset.image,
+            weight: selectedWeight
         }
 
         addToCart(product)
     })
 })
 
+//Changing weight and price
 document.querySelectorAll('.weight').forEach(selection =>{
     selection.addEventListener('change', ()=>{
         const weight = selection.value

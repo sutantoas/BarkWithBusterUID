@@ -4,17 +4,23 @@ function getCart(){
     return JSON.parse(localStorage.getItem('cart')) || []
 }
 
+//Saving items to cart
 function saveCart(cart){
     localStorage.setItem('cart', JSON.stringify(cart))
 }
 
-// ADD TO CART
+// Add to Cart
 function addToCart(product, quantity = 1){
     let cart = getCart()
 
     let existing = null;
+
+    //Loops through and add products to cart
     for (let i = 0; i < cart.length; i++) {
-    if (cart[i].id === product.id) {
+        const cartBaseId = cart[i].id.toString().split('-')[0]
+        const weightedId = cartBaseId + '-' + product.weight //fixes ID
+
+    if (cart[i].id === weightedId) {
         existing = cart[i];
         break;
     }
@@ -23,17 +29,21 @@ function addToCart(product, quantity = 1){
     if (existing) {
         existing.quantity += quantity
     } else {
-        cart.push({ id: product.id,
+        cart.push({ id: product.id + '-' + product.weight,
             name: product.name,
             price: product.price,
             image: product.image,
+            weight: product.weight,
             quantity: quantity})
     }
 
     saveCart(cart)   
-    updateCartCount()              
+    updateCartCount() 
+    console.log('existing:', existing)  // ADD THIS
+             
 }
 
+//Updating cart count icon
 function updateCartCount(){
     const cart = getCart()
     const total = cart.reduce((sum, item) => sum + item.quantity, 0)
@@ -53,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartCount()
 })
 
+//Update quantity of items
 function updateQuantity(id, change){
     let cart = getCart()
     const item = cart.find(p => p.id === id)
@@ -73,6 +84,8 @@ function updateQuantity(id, change){
     updateTotalPrice()
 }
 
+
+//Update pricing
 function updatePrice(id, weight){
     let cart = getCart()
     const item = cart.find(p => p.id === id)
@@ -89,6 +102,7 @@ function updatePrice(id, weight){
         }
 }
 
+//Update total pricing
 function updateTotalPrice(){
     let cart = getCart()
     let totalPrice = 0;
@@ -105,3 +119,11 @@ function clearCart() {
   location.reload()
 }
 
+//Add mobile hamburger menu
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobile-menu').classList.add('open')
+})
+
+document.getElementById('close-menu').addEventListener('click', () => {
+  document.getElementById('mobile-menu').classList.remove('open')
+})

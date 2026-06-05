@@ -1,6 +1,6 @@
 
 
-
+//Renders product based on whats in cart
 document.addEventListener('DOMContentLoaded', () =>{
 
 const cart = getCart()
@@ -14,7 +14,7 @@ cart.forEach(product =>{
                     <img src="${product.image}" alt="product">
                     <div class="prodcut-info">
                         <h2>${product.name}</h2>
-                        <p>100 Grams</p>
+                        <p>${product.weight}</p>
                         <p>Qty: ${product.quantity}</p>
                     </div>
                     <div class="price">
