@@ -30,7 +30,7 @@
             <a href="#" class = "link-properties">Review</a> 
         </div>
         <section class = "nav-bar-image">
-            <img src= "assets/icons/search.png" alt = "login" class="hide-mobile"/>
+            <img src= "assets/icons/search.png" alt = "login" class="hide-mobile search-icon"/>
             <img src ="assets/icons/heart.png" alt="favorite" class="hide-mobile"/>
             <img src= "assets/icons/person.png" alt = "login"/>
             <a href="cart.html" class="cart-link">
@@ -41,7 +41,6 @@
         </section>
         
     </nav>
-
         <div class="mobile-menu" id="mobile-menu">
             <button class="close-menu" id="close-menu">✕</button>
             <ul>
@@ -53,6 +52,13 @@
             </ul>
         </div>
 
+           <div class="search-overlay" id="search-overlay">
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search products...">
+            <button id="search-submit">Search</button>
+            <button id="search-close">✕</button>
+        </div>
+    </div>
         <section class="hero">
         <div class = "hero-text">
             <h1> Bark With Buster</h1>
@@ -80,12 +86,16 @@
                  <p> Global Winner 2025</p>
             </div>
             <div class="awards-row">
-                <img src="assets/image/business_winner.png" alt = "global-2025" />
+                <img src="assets/image/business-new.png" alt = "global-2025" />
                 <p> Business Award 2025</p>
             </div>
             <div class="awards-row">
                 <img src="assets/image/final_2024.png" alt = "global-2025" />
                 <p> North Melbourne Finalist 2024</p>
+            </div>
+            <div class="awards-row">
+                <img src="assets/image/Best-premium.png" alt = "global-2025" />
+                <p> Best Premium Dog Treat 2026</p>
             </div>
         </div>
     </section>
@@ -142,8 +152,10 @@
             <p>Health Needs</p>
         </div>
          <div class = "boxed-products">
+            <a href="productList.html">
             <img src="assets/image/all-treats.png" alt="lamb_liver">
             <p>All treats</p>
+            </a>
         </div>
         </div>
     </section>
@@ -169,6 +181,7 @@
         </div>
     </section>
     </footer>
+        <script src="script/global.js"></script>
+
     </body>
-    <script src="script/global.js"></script>
 </html>

@@ -17,8 +17,8 @@ function addToCart(product, quantity = 1){
 
     //Loops through and add products to cart
     for (let i = 0; i < cart.length; i++) {
-        const cartBaseId = cart[i].id.toString().split('-')[0]
-        const weightedId = cartBaseId + '-' + product.weight //fixes ID
+        const productID = product.id.toString().split('-')[0]
+        const weightedId = productID + '-' + product.weight 
 
     if (cart[i].id === weightedId) {
         existing = cart[i];
@@ -38,9 +38,7 @@ function addToCart(product, quantity = 1){
     }
 
     saveCart(cart)   
-    updateCartCount() 
-    console.log('existing:', existing)  // ADD THIS
-             
+    updateCartCount()              
 }
 
 //Updating cart count icon
@@ -61,6 +59,7 @@ function updateCartCount(){
 
 document.addEventListener('DOMContentLoaded', () => {
     updateCartCount()
+
 })
 
 //Update quantity of items
@@ -119,11 +118,57 @@ function clearCart() {
   location.reload()
 }
 
-//Add mobile hamburger menu
-document.getElementById('hamburger').addEventListener('click', () => {
-  document.getElementById('mobile-menu').classList.add('open')
-})
+//Hamburger function
+const hamburger = document.getElementById('hamburger')
+const mobileMenu = document.getElementById('mobile-menu')
+const closeMenu = document.getElementById('close-menu')
+const overlay = document.querySelector('.overlay')
 
-document.getElementById('close-menu').addEventListener('click', () => {
-  document.getElementById('mobile-menu').classList.remove('open')
+if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.add('open')
+        if (overlay) overlay.classList.add('active')
+    })
+
+    closeMenu.addEventListener('click', () => {
+        mobileMenu.classList.remove('open')
+        if (overlay) overlay.classList.remove('active')
+    })
+
+    if (overlay) {
+        overlay.addEventListener('click', () => {
+            mobileMenu.classList.remove('open')
+            overlay.classList.remove('active')
+        })
+    }
+}
+
+//Searching function
+const searchIcon = document.querySelector('.search-icon')  
+const searchOverlay = document.getElementById('search-overlay')
+const searchClose = document.getElementById('search-close')
+const searchSubmit = document.getElementById('search-submit')
+
+if (searchIcon) {
+    searchIcon.addEventListener('click', () => {
+        searchOverlay.classList.add('active')
+    })
+}
+
+if (searchClose) {
+    searchClose.addEventListener('click', () => {
+        searchOverlay.classList.remove('active')
+    })
+}
+
+if (searchSubmit) {
+    searchSubmit.addEventListener('click', () => {
+        window.location.href = 'productList.html'  
+    })
+}
+
+document.getElementById('search-input')?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        window.location.href = 'productList.html'
+    }
 })
