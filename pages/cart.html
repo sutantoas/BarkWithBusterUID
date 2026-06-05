@@ -27,15 +27,29 @@
             <a href="#" class = "link-properties">Review</a> 
         </div>
         <section class = "nav-bar-image">
-            <img src= "assets/icons/search.png" alt = "login"/>
-            <img src ="assets/icons/heart.png" alt="favorite" />
+            <img src= "assets/icons/search.png" alt = "login" class="hide-mobile"/>
+            <img src ="assets/icons/heart.png" alt="favorite" class="hide-mobile"/>
             <img src= "assets/icons/person.png" alt = "login"/>
-            <img src= "assets/icons/shopping-bag.png" alt = "login"/>
+            <a href="cart.html" class="cart-link">
+                <img src= "assets/icons/shopping-bag.png" alt = "login"/>
+                <span class="cart-count">0</span>
+            </a>
             </section>
         </section>
+        
     </nav>
-
+   
     <body>
+    <div class="mobile-menu" id="mobile-menu">
+    <button class="close-menu" id="close-menu">✕</button>
+    <ul>
+        <li><a href="index.html">Shop Now <span>></span></a></li>
+        <li><a href="productList.html">New Arrivals <span>></span></a></li>
+        <li><a href="#">Best Sellers <span>></span></a></li>
+        <li><a href="#">About Us <span>></span></a></li>
+        <li><a href="#">Reviews <span>></span></a></li>
+    </ul>
+    </div>
         <section class="checkout">
             <h2> Checkout </h2>
             <div class="progress-bar-bg">

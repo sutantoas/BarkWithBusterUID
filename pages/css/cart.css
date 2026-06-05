@@ -62,10 +62,9 @@
     width: 100%;
 }
 
-
 .cart-item{
     display: grid;
-    grid-template-columns: 3fr 2fr 2fr;  
+    grid-template-columns: 3fr 2fr 2fr 0.1fr; 
     padding: 16px 20px;
     align-items: center;
     width: 100%;
@@ -73,13 +72,12 @@
 }
 .cart-heading{
     display: grid;
-    grid-template-columns: 3fr 2fr 2fr;  
+    grid-template-columns: 3fr 2fr 2fr 0.1fr;  
     padding: 12px 20px;
     font-weight: bold;
     border-bottom: 1px solid #000000;
     width: 100%;
 }
-
 
 .cart-product{
     display: flex;
@@ -116,8 +114,30 @@
     border-radius: 0.3rem;
     font-family: Sinhala Sangam MN;
     border: 1px solid #000;
+    background-color: #F4F4F4;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    color: #000;
+    cursor: pointer;
 }
 
+.remove-item {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #555;
+    padding: 0.2rem 0.5rem;
+    position: right;
+    margin-bottom: auto;
+}
+
+.remove-item:hover {
+    color: #000;
+}
+
+/*order summary details */
 .order-summary h2{
     font-size: 1.8rem;
 }
@@ -174,6 +194,8 @@ input{
     font-weight: bold;
 }
 
+
+
 @media (max-width: 390px){
     .checkout {
         width: 100%;          
@@ -187,6 +209,19 @@ input{
     justify-content: space-between;
   }
 
+  .cart-item{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    grid-template-columns: 2fr 1fr;  
+    border-bottom: 1px solid #ddd;
+    position: relative; 
+  }
+
+
+  .cart-heading {
+    grid-template-columns: 2fr 1fr;
+  }
   .cart-all-product {
     flex: none;
     width: 100%;
@@ -200,13 +235,22 @@ input{
   }
 
   .weight {
+    display: none;
     width: 100%;
+    appearance: none; 
+     -webkit-appearance: none;
+    background-color: #F4F4F4;
+    border-radius: 20px;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    font-size: 0.9rem;
+    color: #000;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
   }
 
   .order-summary {
-    flex: none;
     width: 100%;
-
     flex: 0.8;
     border: none;
     padding: 1rem;
@@ -214,11 +258,15 @@ input{
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    margin-top: auto; 
+    min-height: 20rem;
   }
 
   .order-summary h2{
     display: none;
+  }
+
+  .summary-rows{
+    border-bottom: 1px solid #286376;
   }
 
 
@@ -231,7 +279,8 @@ input{
   }
 
   .amount-rows {
-    padding-top: 1rem;    
+    padding-top: 1rem; 
+    margin-top: auto;   
   }
 
   .order-summary a {
@@ -240,12 +289,5 @@ input{
 
   }
 
-  .cart-item {
-    grid-template-columns: 2fr 1fr;  
-    padding: 10px;
-  }
 
-  .cart-heading {
-    grid-template-columns: 2fr 1fr;
-  }
 }

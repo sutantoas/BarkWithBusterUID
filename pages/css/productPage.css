@@ -145,6 +145,7 @@ summary{
     list-style: none;
     font-family: Sinhala Sangam MN;
     font-size: 1.5rem;
+    font-weight: bold;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -238,6 +239,22 @@ summary::after {
     flex-shrink: 0;
 }
 
+.indiv-image img {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    border: 2px solid transparent;
+    border-radius: 4px;
+}
+
+.indiv-image img:hover {
+    opacity: 1;
+}
+
+.indiv-image img.active {
+    opacity: 1;
+    border: 2px solid #1E424E;
+}
 
 /*Mobile Responsiveness*/
 @media (max-width: 390px){

@@ -25,14 +25,14 @@ input{
 .contact{
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     gap: 0.5rem;
 }
 
 .delivery{
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     gap: 0.5rem;
 }
 
@@ -49,12 +49,12 @@ input{
 .payment{
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     gap: 0.5rem;
 }
 
 .checkout-button{
-    width: 90%;
+    width: 100%;
     border-radius: 0.5rem;
     background-color: #286376;
     color: #FFFBF2;
