@@ -7,7 +7,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
-    <nav>
+  
+   
+    <body>
+        <nav>
         <section class="navigation-bar">
         <a href="index.html">
         <div class = "logo">
@@ -27,8 +30,8 @@
             <a href="#" class = "link-properties">Review</a> 
         </div>
         <section class = "nav-bar-image">
-            <img src= "assets/icons/search.png" alt = "login"/>
-            <img src ="assets/icons/heart.png" alt="favorite" />
+            <img src= "assets/icons/search.png" alt = "login" class="hide-mobile"/>
+            <img src ="assets/icons/heart.png" alt="favorite" class="hide-mobile"/>
             <img src= "assets/icons/person.png" alt = "login"/>
             <a href="cart.html" class="cart-link">
                 <img src= "assets/icons/shopping-bag.png" alt = "login"/>
@@ -36,9 +39,20 @@
             </a>
             </section>
         </section>
+        
     </nav>
-   
-    <body>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <button class="close-menu" id="close-menu">✕</button>
+            <ul>
+                <li><a href="index.html">Shop Now <span>></span></a></li>
+                <li><a href="productList.html">New Arrivals <span>></span></a></li>
+                <li><a href="#">Best Sellers <span>></span></a></li>
+                <li><a href="#">About Us <span>></span></a></li>
+                <li><a href="#">Reviews <span>></span></a></li>
+            </ul>
+        </div>
+
         <section class="hero">
         <div class = "hero-text">
             <h1> Bark With Buster</h1>
@@ -115,20 +129,20 @@
     <section class="categories">
         <h2>Categories</h2>
         <div class = "all_categories">
-        <div class = "boxed_products">
-            <img src="assets/image/new_arrivals.png" alt="lamb_liver">
+        <div class = "boxed-products">
+            <img src="assets/image/new-arrivals.png" alt="lamb_liver">
             <p>New Arrivals</p>
         </div>
-         <div class = "boxed_products">
-            <img src="assets/image/lamb_liver.webp" alt="lamb_liver">
+         <div class = "boxed-products">
+            <img src="assets/image/best-sellers.png" alt="lamb_liver">
             <p>Best Sellers</p>
         </div>
-         <div class = "boxed_products">
-            <img src="assets/image/lamb_liver.webp" alt="lamb_liver">
+         <div class = "boxed-products">
+            <img src="assets/image/health-needs.png" alt="lamb_liver">
             <p>Health Needs</p>
         </div>
-         <div class = "boxed_products">
-            <img src="assets/image/lamb_liver.webp" alt="lamb_liver">
+         <div class = "boxed-products">
+            <img src="assets/image/all-treats.png" alt="lamb_liver">
             <p>All treats</p>
         </div>
         </div>

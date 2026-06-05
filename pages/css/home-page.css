@@ -54,6 +54,7 @@
     width: 70%;
     height: auto;
     object-fit: contain;
+    margin-left: auto;
     max-width: 100%;
 
 }
@@ -154,7 +155,7 @@
     background-repeat: no-repeat;
 }
 
-.boxed_products{
+.boxed-products{
     background-color: #1E424E;
     width: 200px;
     height: 200px;
@@ -171,20 +172,23 @@
     gap: 20px;
 }
 
-.boxed_products img{
+.boxed-products img{
     width: 150px;
     height: auto;
 }
-.boxed_products p{
+.boxed-products p{
     color: #FFFBF2;
     font-family: Sinhala Sangam MN;
     font-weight: bold;
 }
 
 
-
 /*Mobile Responsiveness*/
 @media (max-width: 390px){
+    body{
+        overflow-x: hidden;
+    }
+
     .hero{
         height: 300px;
         width: 100%;
@@ -203,7 +207,7 @@
     }
 
     .awards{
-        height: 24rem;
+        height: auto;
         width: 100%;
         background-color: #FFFBF2;
         display: flex;
@@ -211,28 +215,41 @@
         align-items: center;
         row-gap: 10px;
         justify-content: center;
-        padding: 2rem;
+        padding: 2rem 1rem;
         background-image: url('../assets/image/ear_l.png'), url('../assets/image/ear_r.png');
         background-position: left bottom -100px, right bottom -100px;
-        background-size: 10rem auto;
+        background-size: 7rem auto;
         background-repeat: no-repeat;
+    }
+
+    .awards p{
+        font-size: 1rem;
     }
 
     .image_awards{
         display: grid;
-        max-width: 100%;
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        width: 100%;
+        padding-top:1rem;
+        padding-bottom: 4rem;
     }
 
     .awards-row{
         display: flex;
         flex-direction: row;
-        width: 80%;
+        align-items: center;
+        text-align: center;
     }
 
-
     .awards img{
-        width: 100%;
+        width: 3rem;
+        height: 3rem;
+        object-fit: contain;
+    }
+
+    .boxed-products p{
+        font-size: 0.5rem;
     }
     
     .hero-images img{
@@ -244,9 +261,29 @@
         width: 100%;
     }
 
-  .recommended-products{
+    .recommended-products{
         gap: 1rem;
     }
 
+    .all_categories {
+        flex-wrap: wrap;    
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .boxed-products {
+        width: 150px;         
+        height: 150px;
+    }
+
+    .boxed-products img {
+        width: 100px;         
+    }
+
+    .categories {
+        height: auto;          
+        padding: 2rem 0;
+    }
+    
 
 }
