@@ -41,15 +41,19 @@ document.querySelectorAll(".qty-increase").forEach(selection =>{
 document.querySelectorAll(".add-to-cart").forEach(selection =>{
     selection.addEventListener('click', ()=>{
         const selectedWeightBtn = document.querySelector('.weight.selected')
+        const displayedName = document.querySelector('.title-price h2').textContent.trim() 
         const selectedWeight = selectedWeightBtn ? selectedWeightBtn.value : '100g'
+        const displayedPrice = document.querySelector('.title-price h4').textContent.trim()  
 
-        const displayedPrice = document.querySelector('.title-price h4').textContent.trim()  // get displayed price
+        console.log('name:', displayedName)
+        console.log('id:', selection.dataset.id)
+        console.log('image:', selection.dataset.image)
 
         const product = {
-            id: '1',
-            name: 'Chicken Heart',
+            id: selection.dataset.id,  
+            name: displayedName,
             price: displayedPrice,
-            image: 'assets/image/chicken-heart-dog-treats_940x.webp',
+            image: selection.dataset.image,  
             weight: selectedWeight
         }
         console.log('quantity being added: ', quantity)
@@ -59,16 +63,15 @@ document.querySelectorAll(".add-to-cart").forEach(selection =>{
 })
 
 const mainImage = document.querySelector('.product-images img')
-const thumbs = document.querySelectorAll('.indiv-image img')
+const selectImages = document.querySelectorAll('.indiv-image img')
 
-thumbs.forEach(thumb => {
-    thumb.addEventListener('click', () => {
-        mainImage.src = thumb.src
-        mainImage.alt = thumb.alt
+selectImages.forEach(selectImage => {
+    selectImage.addEventListener('click', () => {
+        mainImage.src = selectImage.src
+        mainImage.alt = selectImage.alt
 
-        // highlight selected thumbnail
-        thumbs.forEach(t => t.classList.remove('active'))
-        thumb.classList.add('active')
+        selectImages.forEach(t => t.classList.remove('active'))
+        selectImage.classList.add('active')
     })
 })
 
