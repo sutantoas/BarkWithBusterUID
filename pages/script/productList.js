@@ -12,7 +12,8 @@ const products = [
         name: "Beef Paddywack",
         description: "Air Dried Dog treats",
         price: "$15.95",
-        image: "assets/image/beef-paddywack.webp"
+        image: "assets/image/beef-paddywack.webp",
+        link:"productPageBeef.html"
     },
     {
         id: "3",
@@ -39,7 +40,8 @@ const products = [
         name: "Kangaroo Cubes",
         description: "Air Dried Dog Treats",
         price: "$15.95",
-        image: "assets/image/kangaroo-cubes.png"
+        image: "assets/image/kangaroo-cubes.png",
+        link: "productPagreRoo.html"
     }
 ]
 
