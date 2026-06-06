@@ -113,11 +113,6 @@ function updateTotalPrice(){
     document.getElementById('total').textContent = `$${totalPrice.toFixed(2)}`
 }
 
-function clearCart() {
-  localStorage.removeItem('cart')
-  location.reload()
-}
-
 //Hamburger function
 const hamburger = document.getElementById('hamburger')
 const mobileMenu = document.getElementById('mobile-menu')

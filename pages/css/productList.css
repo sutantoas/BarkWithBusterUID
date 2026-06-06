@@ -4,7 +4,8 @@
     align-items: center;
     flex-direction: column;
     gap: 1.5rem;
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
 }
 
 .product-image{
@@ -62,8 +63,11 @@
     flex-direction: column;
     gap: 8px;
     padding: 1rem;
-    border-bottom: 3px solid #ddd;
+    border-bottom: 3px solid #000;
+    border-top: 3px solid #000;
+    font-family: Sinhala Sangam M;
 }
+
 
 .filter label{
     display: flex;
@@ -71,6 +75,38 @@
     gap: 10px;
     font-size: 1rem;
     cursor: pointer;
+    font-family: Sinhala Sangam MN;
+}
+
+.filter p{
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.filter input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #1E424E;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.filter input[type="checkbox"]:checked {
+    background-color: #1E424E;
+}
+
+.filter input[type="checkbox"]:checked::after {
+    content: 'X';
+    position: absolute;
+    color: #FFFBF2;
+    font-size: 0.8rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .by-health{
@@ -78,7 +114,7 @@
     flex-direction: column;
     gap: 8px;
     padding: 1rem;
-    border-bottom: 3px solid #ddd;
+    border-bottom: 3px solid #000;
 }
 
 .texts{
@@ -112,6 +148,18 @@
     border-radius: 0.3rem;
     font-family: Sinhala Sangam MN;
     border: 1px solid #000;
+     appearance: none;
+    -webkit-appearance: none;
+    background-image: url('../assets/image/arrow-down.png');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-color: #FFFBF2;
+    font-size: 0.9rem;
+    font-weight: bolder;
+    padding: 0.5rem;
+    color: #000;
+    background-size: 0.8rem;  
+    padding-right: 2rem;  
 }
 
 .price-alignment{
@@ -128,12 +176,9 @@
     width: auto;
 }
 
-.weight {
-    width: auto;
-    flex-shrink: 0;
+.price-display{
+    color: #CB5A04; 
 }
-
-
 
 
 /*Mobile Responsiveness*/
@@ -233,8 +278,12 @@
 
 
     .weight {
-        font-size: 0.8rem;
-        padding: 0.3rem;
+        font-size: 0.75rem;
+        padding: 0.5rem 1.7rem 0.5rem 0.5rem;  
+        background-size: 0.6rem;                 
+        background-position: right 0.4rem center;
+        border-radius: 0.3rem;
+        width: auto;
     }
 
     .price-alignment{
