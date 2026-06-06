@@ -2,7 +2,7 @@
 <html>
      <head>   
         <title> Bark With Buster </title>
-        <link rel = "stylesheet" href="css/styles.css">
+        <link rel = "stylesheet" href="css/global.css">
         <link rel = "stylesheet" href="css/checkout.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -18,6 +18,12 @@
     </nav>
 
     <body>
+        <div class="order-summary-header" id="order-summary-toggle">
+            <h3>Order Summary <span class="toggle-arrow">∨</span></h3>
+            <p id="total">$0.00</p>
+        </div>
+
+    
         <section class="checkout-info">
             <section class="checkout-summary">
             <h2>Checkout</h2>
@@ -51,8 +57,9 @@
              </section>
             <section class="order-summary">
                 <h2> Order summary</h2>
-
-                <div id="final-details"></div>
+                <div class="order-summary-content" id="order-summary-content">
+                        <div id="final-details"></div>
+                </div>
 
                 <div class="cost">
                     <div class="summary-rows">

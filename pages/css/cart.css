@@ -84,8 +84,9 @@
     flex-direction: row;
 }
 .cart-product img{
-    width: 50px;
+    width: 100px;
     height: auto;
+    object-fit: contain;
 }
 
 .quantity-button{
@@ -110,16 +111,22 @@
 }
 
 .weight{
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url('../assets/image/arrow-down.png');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
     width: 40%;
-    border-radius: 0.3rem;
     font-family: Sinhala Sangam MN;
     border: 1px solid #000;
     background-color: #F4F4F4;
-    border-radius: 20px;
+    border-radius: 2rem;
     font-size: 0.9rem;
     padding: 0.5rem;
     color: #000;
     cursor: pointer;
+    background-size: 0.8rem;  
+    padding-right: 2rem;  
 }
 
 .remove-item {
@@ -232,6 +239,10 @@ input{
     width: 100px;
     height: 100px;
     object-fit: contain;
+  }
+
+  .product-title h4{
+    font-size: 1.2rem;
   }
 
   .weight {

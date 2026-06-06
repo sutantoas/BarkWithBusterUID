@@ -4,7 +4,6 @@
     flex-direction: row;
     align-items: stretch;
     width: 100%;
-    min-height: 100vh;
 }
 
 .checkout-summary{
@@ -67,11 +66,12 @@ input{
     flex-direction: column;
     align-self: stretch;
     padding: 2rem;
+    min-height: 100vh;
 }
 
 .cost{
     width: 100%;
-    margin-top: auto;
+    margin-top: 2rem;
 }
 
 .product-details{
@@ -94,6 +94,15 @@ input{
     margin-left: auto;
     align-self: flex-end;
 }
+
+.order-summary-header {
+    display: none; 
+}
+
+.order-summary-content {
+    display: block;
+}
+
 
 @media (max-width: 390px){
     .checkout{
@@ -133,5 +142,25 @@ input{
 
     .order-summary{
         display: none;
+    }
+
+    .order-summary-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding: 1rem;
+        width: 100%;
+        background: none;
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .order-summary-content {
+        display: none;  
+    }
+
+    .order-summary-content.open {
+        display: block;
     }
 }
