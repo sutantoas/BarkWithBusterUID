@@ -25,3 +25,14 @@ cart.forEach(product =>{
     })
     updateTotalPrice()
 })
+
+const toggle = document.getElementById('order-summary-toggle')
+const content = document.getElementById('order-summary-content')
+const arrow = document.querySelector('.toggle-arrow')
+
+if (toggle && content) {
+    toggle.addEventListener('click', () => {
+        content.classList.toggle('open')
+        arrow.textContent = content.classList.contains('open') ? '∧' : '∨'
+    })
+}
