@@ -54,6 +54,7 @@
     gap: 8px;
 }
 
+/* filtering details */
 .filtering{
     display: none;
 }
@@ -123,6 +124,7 @@
     gap: 0.2rem;
 }
 
+/* product designs */
 .add-cart{
     background-color: #1E424E;
     width: 100%;

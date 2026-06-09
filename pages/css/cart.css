@@ -9,6 +9,7 @@
     padding: 1rem;
 }
 
+/* progress bar */
 .progress-bar-bg{
     width: 100%;
     height: 15px;
@@ -25,6 +26,7 @@
     
 }
 
+/* progress summary */
 .products-summary{
     display: flex;
     flex-direction: row;   
@@ -56,6 +58,7 @@
     gap: 0.5rem;
 }
 
+/* cart details */
 #cart-row{
     display: flex;
     flex-direction: column;  
@@ -89,6 +92,7 @@
     object-fit: contain;
 }
 
+/* button designs */
 .quantity-button{
     display: flex;
     width: 80px;
@@ -127,6 +131,10 @@
     cursor: pointer;
     background-size: 0.8rem;  
     padding-right: 2rem;  
+}
+
+.mobile-weight{
+    display: none;
 }
 
 .remove-item {
@@ -188,7 +196,6 @@ input{
     width: 100%;
 }
 
-
 .last-row{
     border-top: 1px solid #000;
     padding-top: 0.5rem;
@@ -202,103 +209,112 @@ input{
 }
 
 
-
 @media (max-width: 390px){
     .checkout {
         width: 100%;          
         padding: 1rem;
     }
 
-  .products-summary {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: space-between;
-  }
+    .products-summary {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+    }
 
-  .cart-item{
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    grid-template-columns: 2fr 1fr;  
-    border-bottom: 1px solid #ddd;
-    position: relative; 
-  }
+    .cart-item{
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        grid-template-columns: 2fr 1fr;  
+        border-bottom: 1px solid #ddd;
+        position: relative; 
+    }
 
+    .mobile-weight{
+        display: flex;
+    }
 
-  .cart-heading {
-    grid-template-columns: 2fr 1fr;
-  }
-  .cart-all-product {
-    flex: none;
-    width: 100%;
-    border: none;
-    border-radius: none;
-}
-  .cart-product img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-  }
+    .mobile-weight p{
+        font-size: 1rem;
+        font-family: Sinhala Sangam MN;
+    }
 
-  .product-title h4{
-    font-size: 1.2rem;
-  }
+    .cart-heading {
+        grid-template-columns: 2fr 1fr;
+    }
+    .cart-all-product {
+        flex: none;
+        width: 100%;
+        border: none;
+        border-radius: none;
+        }
+    .cart-product img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        }
 
-  .weight {
-    display: none;
-    width: 100%;
-    appearance: none; 
-     -webkit-appearance: none;
-    background-color: #F4F4F4;
-    border-radius: 20px;
-    padding: 0.5rem 2rem 0.5rem 1rem;
-    font-size: 0.9rem;
-    color: #000;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: right 0.75rem center;
-  }
+    .product-title h4{
+        font-size: 1.2rem;
+        }
 
-  .order-summary {
-    width: 100%;
-    flex: 0.8;
-    border: none;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    min-height: 20rem;
-  }
+    .pricing h3{
+        color: #CB5A04;
+    }
 
-  .order-summary h2{
-    display: none;
-  }
+    .weight {
+        display: none;
+        width: 100%;
+        appearance: none; 
+        -webkit-appearance: none;
+        background-color: #F4F4F4;
+        border-radius: 20px;
+        padding: 0.5rem 2rem 0.5rem 1rem;
+        font-size: 0.9rem;
+        color: #000;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-position: right 0.75rem center;
+    }
 
-  .summary-rows{
-    border-bottom: 1px solid #286376;
-  }
+    .order-summary {
+        width: 100%;
+        flex: 0.8;
+        border: none;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        min-height: 20rem;
+    }
 
+    .order-summary h2{
+        display: none;
+    }
 
-  .discount{
-    display: none;
-  }
+    .summary-rows{
+        border-bottom: 1px solid #286376;
+    }
 
-  .code-apply{
-    display: none;
-  }
+    .discount{
+        display: none;
+    }
 
-  .amount-rows {
-    padding-top: 1rem; 
-    margin-top: auto;   
-  }
+    .code-apply{
+        display: none;
+    }
 
-  .order-summary a {
-    width: 100%;
-    display: block;
+    .amount-rows {
+        padding-top: 1rem; 
+        margin-top: auto;   
+    }
 
-  }
+    .order-summary a {
+        width: 100%;
+        display: block;
 
+    }
 
 }

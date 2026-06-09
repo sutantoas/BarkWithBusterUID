@@ -6,6 +6,7 @@
     width: 100%;
 }
 
+/* checkout input summary */
 .checkout-summary{
     flex: 1;
     display: flex;
@@ -19,7 +20,6 @@ input{
     padding: 1rem;
     font-size: 1.2rem;
 }
-
 
 .contact{
     display: flex;
@@ -59,6 +59,7 @@ input{
     color: #FFFBF2;
 }
 
+/* Order Summary Details */
 .order-summary{
     flex: 1;
     background-color: #FFEEC8;
@@ -86,8 +87,8 @@ input{
     width: 30%;
 }
 
-.prodcut-info h2{
-    font-size: 2rem;
+.product-info h2{
+    font-size: 2.4rem;
 }
 
 .price{
@@ -100,7 +101,7 @@ input{
 }
 
 .order-summary-content {
-    display: block;
+    display: none;
 }
 
 
@@ -139,9 +140,12 @@ input{
         flex: 1;               
         min-width: 0;          
     }
-
-    .order-summary{
+    .order-summary h2{
         display: none;
+    }
+
+    .product-info h2{
+        font-size: 1.5rem;
     }
 
     .order-summary-header {
@@ -158,9 +162,12 @@ input{
 
     .order-summary-content {
         display: none;  
+     
     }
 
     .order-summary-content.open {
         display: block;
+        padding-right: 0.3rem;
+        padding-top: 0.4rem;
     }
 }

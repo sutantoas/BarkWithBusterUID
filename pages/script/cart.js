@@ -14,6 +14,9 @@ cart.forEach(product =>{
             <img src="${product.image}" alt="products">
             <div class="product-title">
                 <h4> ${product.name} </h4>
+                    <div class = "mobile-weight">
+                        <p> ${product.weight} </p>
+                    </div>
                     <div class="quantity-button">
                         <button class = "qty-decrease" data-id="${product.id}"> - </button>
                         <span class = "qty-value" id="qty-dispaly"> ${product.quantity} </span>
@@ -47,6 +50,7 @@ document.querySelectorAll(".qty-increase").forEach(selection =>{
         updateQuantity(selection.dataset.id, 1)
     })
 })
+
 
 //Change weight in cart
 document.querySelectorAll('.weight').forEach(selection =>{
@@ -97,10 +101,12 @@ document.querySelectorAll('.weight').forEach(selection =>{
                 currentItem.price = prices[weight]
                 currentItem.id = newId
                 card.dataset.id = newId
+                card.querySelector('.qty-decrease').dataset.id = newId
+                card.querySelector('.qty-increase').dataset.id = newId
+
                 saveCart(cart)
             }
         }
-
   })
 })
 
@@ -116,7 +122,6 @@ document.querySelectorAll('.remove-item').forEach(btn => {
         updateCartCount()
     })
 })
-
 updateTotalPrice()
 
 })
