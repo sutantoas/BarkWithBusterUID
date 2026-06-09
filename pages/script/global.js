@@ -1,11 +1,11 @@
 
 // getting items from cart
-function getCart(){
+function gettingCart(){
     return JSON.parse(localStorage.getItem('cart')) || []
 }
 
 //Saving items to cart
-function saveCart(cart){
+function savingToCart(cart){
     localStorage.setItem('cart', JSON.stringify(cart))
 }
 

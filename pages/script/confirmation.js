@@ -1,3 +1,4 @@
+//Removes items from cart
 function clearCart() {
     localStorage.removeItem('cart')
     updateCartCount()
