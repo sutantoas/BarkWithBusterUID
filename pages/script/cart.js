@@ -75,6 +75,7 @@ document.querySelectorAll('.weight').forEach(selection =>{
     const currentItem = cart.find(i => i.id === oldId)
     const existingNewWeight = cart.find(i => i.id === newId)
         
+    //if weight exists
     if (existingNewWeight && existingNewWeight !== currentItem) {
             existingNewWeight.quantity += currentItem.quantity
             

@@ -1,4 +1,4 @@
-.beef-product{
+.all-product{
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -199,6 +199,10 @@ summary::after {
 .reviewer-info img{ 
     max-width: 100%;
     width: 5rem;
+}
+
+.view-more{
+    text-decoration: underline;
 }
 
 /*Recommended Products*/

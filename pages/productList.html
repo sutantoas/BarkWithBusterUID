@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
+    <!-- Main navigation Bar -->
     <nav>
         <section class="navigation-bar">
         <a href="index.html">
@@ -27,7 +28,7 @@
             <a href="#" class = "link-properties">Review</a> 
         </div>
         <section class = "nav-bar-image">
-            <img src= "assets/icons/search.png" alt = "login" class="hide-mobile"/>
+            <img src= "assets/icons/search.png" alt = "login" class="hide-mobile search-icon"/>
             <img src ="assets/icons/heart.png" alt="favorite" class="hide-mobile"/>
             <img src= "assets/icons/person.png" alt = "login"/>
             <a href="cart.html" class="cart-link">
@@ -40,17 +41,27 @@
     </nav>
    
     <body>
-
+    <!-- Overlay for mobile view only -->
     <div class="mobile-menu" id="mobile-menu">
-    <button class="close-menu" id="close-menu">✕</button>
-    <ul>
-        <li><a href="index.html">Shop Now <span>></span></a></li>
-        <li><a href="productList.html">New Arrivals <span>></span></a></li>
-        <li><a href="#">Best Sellers <span>></span></a></li>
-        <li><a href="#">About Us <span>></span></a></li>
-        <li><a href="#">Reviews <span>></span></a></li>
-    </ul>
+        <button class="close-menu" id="close-menu">✕</button>
+        <ul>
+            <li><a href="index.html">Shop Now <span>></span></a></li>
+            <li><a href="productList.html">New Arrivals <span>></span></a></li>
+            <li><a href="#">Best Sellers <span>></span></a></li>
+            <li><a href="#">About Us <span>></span></a></li>
+            <li><a href="#">Reviews <span>></span></a></li>
+        </ul>
     </div>
+
+    <!-- Searching overlay-->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search products...">
+            <button id="search-submit">Search</button>
+            <button id="search-close">✕</button>
+        </div>
+    </div>
+
     <div class="nav-path">
         <a href="index.html">Home</a>
         <span> → </span>
@@ -58,6 +69,7 @@
     </div>
         <section class="all-products">
             <h2>All Products</h2>
+                <!-- filtering details -->
                 <div class="products-filter">
                 <div class="filter">
                     <button type="button" class="filtering"> Filter 
@@ -68,23 +80,24 @@
                     <div class="protein-type">
                     <p>Protein Type</p>
                     <label><input type="checkbox" value="chicken"> Chicken </label>
-                    <label><input type="checkbox" value="chicken"> Beef </label>
-                    <label><input type="checkbox" value="chicken"> Lamb </label>
-                    <label><input type="checkbox" value="chicken"> Emu </label>
-                    <label><input type="checkbox" value="chicken"> Pork </label>
-                    <label><input type="checkbox" value="chicken"> Seafood </label>
-                    <label><input type="checkbox" value="chicken"> Duck </label>
+                    <label><input type="checkbox" value="beef"> Beef </label>
+                    <label><input type="checkbox" value="lamb"> Lamb </label>
+                    <label><input type="checkbox" value="emu"> Emu </label>
+                    <label><input type="checkbox" value="pork"> Pork </label>
+                    <label><input type="checkbox" value="seafood"> Seafood </label>
+                    <label><input type="checkbox" value="duck"> Duck </label>
                     </div>
                 <div class="by-health">
                     <p>By Health</p>
-                    <label><input type="checkbox" value="chicken"> Dental chew </label>
-                    <label><input type="checkbox" value="chicken"> Sensitive stomach </label>
-                    <label><input type="checkbox" value="chicken"> Grain Free </label>
-                    <label><input type="checkbox" value="chicken"> Training </label>
+                    <label><input type="checkbox" value="dental-chew"> Dental chew </label>
+                    <label><input type="checkbox" value="sensitive-stomach"> Sensitive stomach </label>
+                    <label><input type="checkbox" value="grain-free"> Grain Free </label>
+                    <label><input type="checkbox" value="training"> Training </label>
                     
                 </div>
             </div>
 
+        <!-- Product container used to create products in js -->
         <div id="product-container"></div>
         </div>
          </section>
@@ -92,7 +105,7 @@
          <script src="script/productList.js"></script>
          <script src="script/cart.js"></script>
 
-          <section class="footer">
+    <section class="footer">
         <div class="about-us">
             <h2>About Us</h2>
             <p>Buster was a beloved German Shepherd pup from my family—a relative's 

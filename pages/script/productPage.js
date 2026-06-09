@@ -22,6 +22,7 @@ document.querySelectorAll('.weight').forEach(btn =>{
 const cart = getCart()
 let quantity = 1
 
+//decreasing quantity of product
 document.querySelectorAll(".qty-decrease").forEach(selection =>{
     selection.addEventListener('click', ()=>{
         if(quantity > 1){
@@ -31,6 +32,7 @@ document.querySelectorAll(".qty-decrease").forEach(selection =>{
     })
 })
 
+//increasing quantity of product
 document.querySelectorAll(".qty-increase").forEach(selection =>{
     selection.addEventListener('click', ()=>{
         quantity++
@@ -38,16 +40,13 @@ document.querySelectorAll(".qty-increase").forEach(selection =>{
     })
 })
 
+//adding to cart
 document.querySelectorAll(".add-to-cart").forEach(selection =>{
     selection.addEventListener('click', ()=>{
         const selectedWeightBtn = document.querySelector('.weight.selected')
         const displayedName = document.querySelector('.title-price h2').textContent.trim() 
         const selectedWeight = selectedWeightBtn ? selectedWeightBtn.value : '100g'
         const displayedPrice = document.querySelector('.title-price h4').textContent.trim()  
-
-        console.log('name:', displayedName)
-        console.log('id:', selection.dataset.id)
-        console.log('image:', selection.dataset.image)
 
         const product = {
             id: selection.dataset.id,  
@@ -56,12 +55,11 @@ document.querySelectorAll(".add-to-cart").forEach(selection =>{
             image: selection.dataset.image,  
             weight: selectedWeight
         }
-        console.log('quantity being added: ', quantity)
-        console.log('weight being added: ', selectedWeight)
         addToCart(product, quantity)
     })
 })
 
+//Scroll through images
 const mainImage = document.querySelector('.product-images img')
 const selectImages = document.querySelectorAll('.indiv-image img')
 

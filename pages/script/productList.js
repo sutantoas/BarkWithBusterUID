@@ -2,6 +2,7 @@ const products = [
     {
         id: "1",
         name: "Chicken Heart",
+        protein: "chicken",
         description: "Air Dried Dog treats",
         price: "$15.95",
         image: "assets/image/chicken-heart-dog-treats_940x.webp",
@@ -10,6 +11,7 @@ const products = [
     {
         id: "2",
         name: "Beef Paddywack",
+        protein: "beef",
         description: "Air Dried Dog treats",
         price: "$15.95",
         image: "assets/image/beef-paddywack.webp",
@@ -18,6 +20,7 @@ const products = [
     {
         id: "3",
         name: "Lamb Liver",
+        protein: "lamb",
         description: "Air Dried Dog treats",
         price: "$15.95",
         image: "assets/image/lamb_liver.webp"
@@ -25,6 +28,7 @@ const products = [
     {
         id: "4",
         name: "Chicken Neck",
+        protein: "chicken",
         description: "Air Dried Dog treats",
         price: "$15.95",
         image: "assets/image/chicken-neck.webp"
@@ -50,7 +54,7 @@ const container = document.getElementById('product-container')
 
 products.forEach(product =>{
     container.innerHTML += `
-      <div class="variety-product">
+      <div class="variety-product" data-protein="${product.protein}">
                 <div class="product-image">
                     <img src="${product.image}" alt="chicken hearts">   
                 </div>
@@ -120,4 +124,28 @@ document.querySelectorAll('.weight').forEach(selection =>{
 
 
     })
+})
+
+//Filter products in product listing
+function filterProducts() {
+    const checkedBoxes = Array.from(document.querySelectorAll('.protein-type input:checked')).map(cb => cb.value)
+
+    const diffProducts = document.querySelectorAll('.variety-product')
+    if (checkedBoxes.length === 0) {
+        diffProducts.forEach(p => p.style.display = 'flex')
+        return
+    }
+
+    diffProducts.forEach(product => {
+        const protein = product.dataset.protein
+        if (checkedBoxes.includes(protein)) {
+            product.style.display = 'flex'
+        } else {
+            product.style.display = 'none'
+        }
+    })
+}
+
+document.querySelectorAll('.protein-type input').forEach(checkbox => {
+    checkbox.addEventListener('change', filterProducts)
 })

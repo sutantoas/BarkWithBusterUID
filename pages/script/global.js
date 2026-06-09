@@ -26,6 +26,7 @@ function addToCart(product, quantity = 1){
     }
 }
 
+    //If it already exists update the quantity
     if (existing) {
         existing.quantity += quantity
     } else {
@@ -71,13 +72,12 @@ function updateQuantity(id, change){
         item.quantity += change
         if(item.quantity <= 0){
             cart = cart.filter(p => p.id !== id)
-          const card = document.querySelector(`.qty-decrease[data-id="${id}"]`).closest('.cart-item')
-      card.remove()
-    } else {
-      // update span directly
-      const card = document.querySelector(`.qty-decrease[data-id="${id}"]`).closest('.cart-item')
-      card.querySelector('span').textContent = item.quantity
-    }
+            const card = document.querySelector(`.qty-decrease[data-id="${id}"]`).closest('.cart-item')
+            card.remove()
+        } else {
+            const card = document.querySelector(`.qty-decrease[data-id="${id}"]`).closest('.cart-item')
+            card.querySelector('span').textContent = item.quantity
+        }
     }
     saveCart(cart)
     updateTotalPrice()
@@ -158,12 +158,12 @@ if (searchClose) {
 
 if (searchSubmit) {
     searchSubmit.addEventListener('click', () => {
-        window.location.href = 'productList.html'  
+        window.location.href = 'productPage.html'  
     })
 }
 
 document.getElementById('search-input')?.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
-        window.location.href = 'productList.html'
+        window.location.href = 'productPage.html'
     }
 })
