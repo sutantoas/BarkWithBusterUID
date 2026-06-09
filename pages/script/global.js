@@ -11,7 +11,7 @@ function savingToCart(cart){
 
 // Add to Cart
 function addToCart(product, quantity = 1){
-    let cart = getCart()
+    let cart = gettingCart()
 
     let existing = null;
 
@@ -38,13 +38,13 @@ function addToCart(product, quantity = 1){
             quantity: quantity})
     }
 
-    saveCart(cart)   
+    savingToCart(cart)   
     updateCartCount()              
 }
 
 //Updating cart count icon
 function updateCartCount(){
-    const cart = getCart()
+    const cart = gettingCart()
     const total = cart.reduce((sum, item) => sum + item.quantity, 0)
 
     const badge = document.querySelector('.cart-count')
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //Update quantity of items
 function updateQuantity(id, change){
-    let cart = getCart()
+    let cart = gettingCart()
     const item = cart.find(p => p.id === id)
 
     if(item){
@@ -79,14 +79,14 @@ function updateQuantity(id, change){
             card.querySelector('span').textContent = item.quantity
         }
     }
-    saveCart(cart)
+    savingToCart(cart)
     updateTotalPrice()
 }
 
 
 //Update pricing
 function updatePrice(id, weight){
-    let cart = getCart()
+    let cart = gettingCart()
     const item = cart.find(p => p.id === id)
     const prices = {
             '100g': '$15.95',
@@ -97,13 +97,13 @@ function updatePrice(id, weight){
         if(item){
             item.weight == weight
             item.price = prices[weight]
-            saveCart(cart)
+            savingToCart(cart)
         }
 }
 
 //Update total pricing
 function updateTotalPrice(){
-    let cart = getCart()
+    let cart = gettingCart()
     let totalPrice = 0;
     cart.forEach(element => {
         const price = parseFloat(element.price.replace('$', ''))

@@ -3,7 +3,7 @@
 //Renders product based on whats in cart
 document.addEventListener('DOMContentLoaded', () =>{
 
-const cart = getCart()
+const cart = gettingCart()
 const container = document.getElementById("final-details")
 const container_mobile = document.getElementById("mobile-final-details")
 

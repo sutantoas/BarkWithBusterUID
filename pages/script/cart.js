@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () =>{
 
-const cart = getCart()
+const cart = gettingCart()
 const container = document.getElementById("cart-row")
 
 if(!container) return
@@ -75,7 +75,7 @@ document.querySelectorAll('.weight').forEach(selection =>{
     updateTotalPrice()
 
     //Checking and merging if weight already exists within cart.
-    const cart = getCart()
+    const cart = gettingCart()
     const currentItem = cart.find(i => i.id === oldId)
     const existingNewWeight = cart.find(i => i.id === newId)
         
@@ -86,7 +86,7 @@ document.querySelectorAll('.weight').forEach(selection =>{
             // remove current item
             const index = cart.indexOf(currentItem)
             cart.splice(index, 1)
-            saveCart(cart)
+            savingToCart(cart)
             card.remove()
 
             //Updates product
@@ -104,7 +104,7 @@ document.querySelectorAll('.weight').forEach(selection =>{
                 card.querySelector('.qty-decrease').dataset.id = newId
                 card.querySelector('.qty-increase').dataset.id = newId
 
-                saveCart(cart)
+                savingToCart(cart)
             }
         }
   })
@@ -114,9 +114,9 @@ document.querySelectorAll('.weight').forEach(selection =>{
 document.querySelectorAll('.remove-item').forEach(btn => {
     btn.addEventListener('click', () => {
         const id = btn.dataset.id
-        let cart = getCart()
+        let cart = gettingCart()
         cart = cart.filter(item => item.id !== id)
-        saveCart(cart)
+        savingToCart(cart)
         btn.closest('.cart-item').remove()
         updateTotalPrice()
         updateCartCount()

@@ -19,7 +19,7 @@ document.querySelectorAll('.weight').forEach(btn =>{
     
 })
 
-const cart = getCart()
+const cart = gettingCart()
 let quantity = 1
 
 //decreasing quantity of product
