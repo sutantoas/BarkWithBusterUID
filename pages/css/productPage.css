@@ -259,6 +259,14 @@ summary::after {
 
 /*Mobile Responsiveness*/
 @media (max-width: 390px){
+       .all-product {
+        flex-direction: column; 
+        padding: 0.5rem;
+        gap: 1rem;
+        width: 100%;
+        overflow: hidden;
+    }
+
     .beef-product{
         display: flex;
         flex-direction: column;
