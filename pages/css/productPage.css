@@ -259,7 +259,7 @@ summary::after {
 
 /*Mobile Responsiveness*/
 @media (max-width: 390px){
-       .all-product {
+    .all-product {
         flex-direction: column; 
         padding: 0.5rem;
         gap: 1rem;
