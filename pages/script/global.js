@@ -181,6 +181,6 @@ if (searchClose) {
 
 if (searchSubmit) {
     searchSubmit.addEventListener('click', () => {
-        window.location.href = 'pages/productPage.html'  
+        window.location.href = 'productPage.html'  
     })
 }
