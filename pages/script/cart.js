@@ -76,10 +76,21 @@ document.querySelectorAll('.weight').forEach(selection =>{
 
     //Checking and merging if weight already exists within cart.
     const cart = gettingCart()
-    const currentItem = cart.find(i => i.id === oldId)
-    const existingNewWeight = cart.find(i => i.id === newId)
-        
-    //if weight exists
+    let currentItem = null
+    for(let i = 0; i < cart.length; i++){
+        if(cart[i].id === oldId){
+            currentItem = cart[i]
+            break
+        }    
+    }
+    let existingNewWeight = null
+    for(let i = 0; i < cart.length; i++){
+        if(cart[i].id === newId){
+            existingNewWeight = cart[i]
+            break
+        }
+    }
+    //checks if weight exists in cart and isn't same item
     if (existingNewWeight && existingNewWeight !== currentItem) {
             existingNewWeight.quantity += currentItem.quantity
             

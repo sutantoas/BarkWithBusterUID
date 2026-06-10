@@ -12,20 +12,20 @@ function savingToCart(cart){
 // Add to Cart
 function addToCart(product, quantity = 1){
     let cart = gettingCart()
-
     let existing = null;
 
     //Loops through and add products to cart
     for (let i = 0; i < cart.length; i++) {
+
+        //Checks ID through number and weight
         const productID = product.id.toString().split('-')[0]
         const weightedId = productID + '-' + product.weight 
 
-    if (cart[i].id === weightedId) {
-        existing = cart[i];
-        break;
-    }
+        if (cart[i].id === weightedId) {
+            existing = cart[i];
+            break;
+        }
 }
-
     //If it already exists update the quantity
     if (existing) {
         existing.quantity += quantity
@@ -66,12 +66,26 @@ document.addEventListener('DOMContentLoaded', () => {
 //Update quantity of items
 function updateQuantity(id, change){
     let cart = gettingCart()
-    const item = cart.find(p => p.id === id)
+
+    let item = null
+    //find item in cart array
+    for(let i = 0; i < cart.length; i++){
+        if(cart[i].id === id){
+            item = cart[i]
+            break
+        }
+    }
 
     if(item){
         item.quantity += change
+        //find the item index to remove
         if(item.quantity <= 0){
-            cart = cart.filter(p => p.id !== id)
+            for(let i = 0; i < cart.length; i++){
+                if(cart[i].id === id){
+                    cart.splice(i, 1)
+                    break
+                }
+            }
             const card = document.querySelector(`.qty-decrease[data-id="${id}"]`).closest('.cart-item')
             card.remove()
         } else {
@@ -87,7 +101,16 @@ function updateQuantity(id, change){
 //Update pricing
 function updatePrice(id, weight){
     let cart = gettingCart()
-    const item = cart.find(p => p.id === id)
+
+    let item = null
+    //find item in cart array
+    for(let i = 0; i < cart.length; i++){
+        if(cart[i].id === id){
+            item = cart[i]
+            break
+        }
+    }
+
     const prices = {
             '100g': '$15.95',
             '200g': '$21.95',
@@ -158,12 +181,6 @@ if (searchClose) {
 
 if (searchSubmit) {
     searchSubmit.addEventListener('click', () => {
-        window.location.href = 'productPage.html'  
+        window.location.href = '../pages/productPage.html'  
     })
 }
-
-document.getElementById('search-input')?.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-        window.location.href = 'productPage.html'
-    }
-})

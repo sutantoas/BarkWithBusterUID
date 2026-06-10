@@ -5,7 +5,7 @@ document.querySelectorAll('.weight').forEach(btn =>{
             button.classList.remove('selected')
         })
         btn.classList.add('selected')
-         const weight = btn.value
+        const weight = btn.value
 
         const prices = {
             '100g': '$15.95',
@@ -26,8 +26,8 @@ let quantity = 1
 document.querySelectorAll(".qty-decrease").forEach(selection =>{
     selection.addEventListener('click', ()=>{
         if(quantity > 1){
-        quantity--
-        document.getElementById("qty-display").textContent = quantity
+            quantity--
+            document.getElementById("qty-display").textContent = quantity
         }
     })
 })

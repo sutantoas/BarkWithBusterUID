@@ -121,8 +121,6 @@ document.querySelectorAll('.weight').forEach(selection =>{
         const card = selection.closest('.variety-product')
         const priceDisplay = card.querySelector('.price-alignment p')
         priceDisplay.textContent = prices[weight]
-
-
     })
 })
 
