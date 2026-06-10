@@ -303,6 +303,7 @@ summary::after {
     .title-price h4 {
         font-size: 1.4rem;
     }
+    /* Reviews details*/
     .detail-reviews p{
         font-size: 1.2rem;
     }
@@ -338,6 +339,7 @@ summary::after {
         width: 5rem;
     }
 
+    /* button selections */
     .qty-decrease{
         border: none;
         background-color: #FFDB77;

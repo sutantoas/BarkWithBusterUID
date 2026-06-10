@@ -1,4 +1,4 @@
-
+//altering weight selection in product page
 document.querySelectorAll('.weight').forEach(btn =>{
     btn.addEventListener('click', () => {
         document.querySelectorAll('.weight').forEach(button =>{
